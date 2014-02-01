@@ -37,7 +37,7 @@ class BaseSniffTest extends PHPUnit_Framework_TestCase
 
         PHP_CodeSniffer::setConfigData('testVersion', null, true);
 
-        self::$phpcs->process(array(), 'PHPCompatibility');
+        self::$phpcs->process(array(), realpath(dirname(__DIR__)));
         self::$phpcs->setIgnorePatterns(array());
     }
 
